@@ -11,15 +11,15 @@ private valor_aquisicao: number;
 private status_livro_emprestado: number;
 
     constructor(
-        _titulo: number,
-        _autor: number,
+        _titulo: string,
+        _autor: string,
         _editora: string,
-        _ano_publicacao: string,
+        _ano_publicacao: number,
         _isbn: number,
-        _quant_total: string,
-        _quant_disponivel: string,
+        _quant_total: number,
+        _quant_disponivel: number,
         _valor_aquisicao: number,
-        _status_livro_emprestado: number;
+        _status_livro_emprestado: number,
     ){
         this.titulo = _titulo;
         this.autor = _autor;
@@ -29,7 +29,7 @@ private status_livro_emprestado: number;
         this.quant_total = _quant_total;
         this.quant_disponivel = _quant_disponivel;
         this.valor_aquisicao = _valor_aquisicao;
-        this.status_livro_emprestado: _status_livro_emprestado
+        this.status_livro_emprestado= _status_livro_emprestado;
     }
 
      public getTitulo(): string {
@@ -64,36 +64,44 @@ private status_livro_emprestado: number;
         return this.valor_aquisicao;
     }
 
-      public setStatus_livro_emprestado(): number {
-         this.status_livro_emprestado= _id_aluno;
+      public getStatus_livro_emprestado(): number {
+        return this.status_livro_emprestado;
     }
 
-      public setRa(_ra: number): void {
-         this.ra = _ra;
+      public setTitulo(_titulo: string): void {
+         this.titulo = _titulo;
     }
 
-      public setNome(_nome: string): void {
-         this.nome = _nome;
+      public setAutor(_autor: string): void {
+         this.autor = _autor;
     }
 
-      public setSobrenome(_sobrenome: string): void {
-         this.sobrenome = _sobrenome;
+      public setEditora(_editora: string): void {
+         this.editora = _editora;
     }
 
-      public setData_nascimento(_data_nascimento: number): void {
-         this.data_nascimento = _data_nascimento;
+      public setAno_publicacao(_ano_publicacao: number): void {
+         this.ano_publicacao = _ano_publicacao;
     }
 
-       public setEndereco(_endereco: string): void {
-         this.endereco = _endereco;
+       public setIsbn(_isbn: number): void {
+         this.isbn = _isbn;
     }
 
-       public setEmail(_email: string): void {
-         this.email = _email;
+       public setQuant_total(_quant_total: number): void {
+         this.quant_total = _quant_total;
     }
 
-       public setCelular(_celular: number): void {
-         this.celular = _celular;
+       public setQuant_disponovel(_quant_disponivel: number): void {
+         this.quant_disponivel = _quant_disponivel;
+    }
+
+        public setValor_equisacao(_valor_aquisicao: number): void {
+         this.valor_aquisicao = _valor_aquisicao;
+    }
+
+        public setStatus_livro_emprestado(_status_livro_emprestado: number): void {
+         this.status_livro_emprestado = _status_livro_emprestado;
     }
 }
 

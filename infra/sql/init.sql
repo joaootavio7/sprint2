@@ -23,6 +23,20 @@ CREATE TRIGGER trg_gerar_ra
 BEFORE INSERT ON Aluno
 FOR EACH ROW EXECUTE FUNCTION gerar_ra();
 
+
+CREATE TABLE Livro (
+    id_livro INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    titulo VARCHAR (200) NOT NULL,
+    autor VARCHAR (150) NOT NULL,
+    editora VARCHAR (100) NOT NULL,
+    ano_publicacao VARCHAR (5),
+    isbn VARCHAR (20),
+    quant_total INTEGER NOT NULL,
+    quant_disponivel INTEGER NOT NULL,
+    valor_aquisicao DECIMAL (10,2),
+    status_livro_emprestado VARCHAR (20)
+);
+
 CREATE TABLE Emprestimo (
     id_emprestimo INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     id_aluno INT REFERENCES Aluno(id_aluno),
